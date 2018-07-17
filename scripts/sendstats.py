@@ -263,7 +263,7 @@ body += """<table class="medium">
 body += "<h2>Historic Risk Index by Team</h2><img src=\"cid:image1\"><br>\n"
 
 # finish up the email message
-body += "</body>\n</html>"
+body += "\n</body>\n</html>"
 
 # set up multipart email message
 msgRoot = MIMEMultipart("related")

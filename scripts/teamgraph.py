@@ -57,6 +57,7 @@ for row in rows:
         for sev in sevCounts:
             riskIndex += weights[sev["category"]] * sev["total"]
         teamStats[teamName].append( (date, riskIndex) )
+        if DEBUG: print date + '  ' + teamName + ': ' + str(riskIndex)
 
 # Sort list of team stats by most recent risk index
 statList = sorted(teamStats.items(), key = lambda k: k[1][-1][1])
@@ -106,11 +107,12 @@ y_data_stacked = NP.cumsum(y_data, axis=0)
 fig = PLT.figure()
 ax1 = fig.add_subplot(111)
 # set y-axis to start at 0
-PLT.ylim(ymin = 0)
+# PLT.ylim(ymin = 0)
+PLT.ylim(bottom = 0, auto = True)
 
-colors = ["#ffe84c", "#7633bd", "#3d853d", "#a23c3c", "#8cacc6",
+colors = ["#ffe84c", "#7633bd", "#6dc78d", "#a23c3c", "#8cacc6",
           "#bd9b33", "#9440ed", "#4da74d", "#cb4b4b", "#afd8f8",
-          "#edc240"]
+          "#edc240", "#8080ff", "#3d853d", "#c00000", "#80c0f0"]
 
 # first one manually? okay...
 ax1.fill_between(x, 0, y_data_stacked[0,:], facecolor = colors[0])
