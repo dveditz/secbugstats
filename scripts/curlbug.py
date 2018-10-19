@@ -29,10 +29,10 @@ def fetchBugzillaPage(path):
 # Queries to run:
 # Keys are the category of bugs and values are the query params to send to the
 # Bugzilla API.
-tocheck = {"sg_critical" : "keywords=sec-critical;keywords_type=allwords;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;classification=Client%20Software;classification=Components",
-           "sg_high" : "keywords=sec-high;keywords_type=allwords;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;classification=Client%20Software;classification=Components",
-           "sg_moderate" : "keywords=sec-moderate;keywords_type=allwords;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;classification=Client%20Software;classification=Components",
-           "sg_low" : "keywords=sec-low;keywords_type=allwords;bug_status=UNCONFIRMED;bug_status=NEW;bug_status=ASSIGNED;bug_status=REOPENED;classification=Client%20Software;classification=Components",
+tocheck = {"sg_critical" : "keywords=sec-critical&keywords_type=allwords&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&classification=Client%20Software&classification=Components",
+           "sg_high" : "keywords=sec-high&keywords_type=allwords&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&classification=Client%20Software&classification=Components",
+           "sg_moderate" : "keywords=sec-moderate&keywords_type=allwords&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&classification=Client%20Software&classification=Components",
+           "sg_low" : "keywords=sec-low&keywords_type=allwords&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&classification=Client%20Software&classification=Components",
            }
 
 now = time.localtime()
